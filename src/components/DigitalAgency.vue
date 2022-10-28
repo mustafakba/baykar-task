@@ -66,7 +66,6 @@ export default {
     color:white;
 }
 .some-values{
-    padding-bottom: 500px;
     margin-top: 140px;
     .item {
         .title{
