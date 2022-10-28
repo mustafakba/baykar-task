@@ -1,13 +1,16 @@
 <template>
 <HomePage></HomePage>
+<DigitalAgency></DigitalAgency>
 </template>
 
 <script>
 import HomePage from "@/components/HomePage";
+import DigitalAgency from "@/components/DigitalAgency";
 export default {
   name: 'App',
   components: {
-      HomePage
+      HomePage,
+      DigitalAgency
   }
 }
 </script>
