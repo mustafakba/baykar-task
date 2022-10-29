@@ -2,15 +2,18 @@
 <HomePage></HomePage>
 <DigitalAgency></DigitalAgency>
 <OurSolutions></OurSolutions>
+    <ServicePage></ServicePage>
 </template>
 
 <script>
 import HomePage from "@/components/HomePage";
 import DigitalAgency from "@/components/DigitalAgency";
 import OurSolutions from "@/components/OurSolutions";
+import ServicePage from "@/components/ServicePage";
 export default {
   name: 'App',
   components: {
+      ServicePage,
       HomePage,
       DigitalAgency,
       OurSolutions
