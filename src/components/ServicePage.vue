@@ -2,9 +2,8 @@
 <div class="container">
     <div class="help-section flex justify-around items-center container">
         <h3 class="title">Service We Can Help You</h3>
-        <button @mouseover="hover=true" @mouseleave="hover = false" class="button flex items-center ">See All
-            <img v-if="hover" style="width: 15px; height: 15px" class="ml-2.5" src="../image/turn.svg" alt="">
-            <img v-else style="width: 15px; height: 15px" class="ml-2.5" src="../image/turn-white-icon.svg" alt="">
+        <button class="button flex items-center ">Read More
+            <TurnWhite class="ml-2 arrow-white"></TurnWhite>
         </button>
     </div>
     <section class="card-section">
@@ -17,7 +16,7 @@
                         {{items[1].paragraph}}
                     </div>
                     <button class="button flex items-center ">Read More
-                        <img style="width: 15px; height: 15px" class="ml-2.5" src="../image/turn.svg" alt="">
+                        <TurnWhite class="ml-2 arrow-white"></TurnWhite>
                     </button>
                 </div>
             </div>
@@ -29,7 +28,7 @@
                         {{items[2].paragraph}}
                     </div>
                     <button class="button flex items-center ">Read More
-                        <img style="width: 15px; height: 15px" class="ml-2.5" src="../image/turn.svg" alt="">
+                        <TurnWhite class="ml-2"></TurnWhite>
                     </button>
                 </div>
             </div>
@@ -44,7 +43,7 @@
                         {{items[1].paragraph}}
                     </div>
                     <button class="button flex items-center ">Read More
-                        <img style="width: 15px; height: 15px" class="ml-2.5" src="../image/turn.svg" alt="">
+                        <TurnWhite class="ml-2"></TurnWhite>
                     </button>
                 </div>
             </div>
@@ -56,7 +55,7 @@
                         {{items[2].paragraph}}
                     </div>
                     <button class="button flex items-center ">Read More
-                        <img style="width: 15px; height: 15px" class="ml-2.5" src="../image/turn.svg" alt="">
+                        <TurnWhite class="ml-2"></TurnWhite>
                     </button>
                 </div>
             </div>
@@ -69,8 +68,12 @@
 </template>
 
 <script>
+import TurnWhite from "@/components/TurnWhite";
 export default {
     name: "ServicePage",
+    components:{
+        TurnWhite,
+    },
     data(){
         return{
             hover:false,
@@ -115,6 +118,7 @@ export default {
 *{
     font-family: inter;
 }
+
 .container{
     margin-top: 120px;
 }
@@ -129,28 +133,29 @@ export default {
         line-height: 58px;
         text-transform: capitalize;
     }
-    .button{
-        color: #FFFFFF;
-        opacity: 1;
-        padding: 20px;
-        border-radius: 30px;
-        border: 1px solid;
-        height: 60px;
-        margin-top: 48px;
-        transition: .3s;
-    }
-    .button:hover{
-        color: #0A142F;
-        opacity: 1;
-        border-radius: 30px;
-        background-color: #FFC93E;
-        height: 60px;
-        svg{
-            fill: #0A142F;
-        }
-    }
 }
-
+.button{
+    .arrow-white{
+    }
+    color: #FFFFFF;
+    opacity: 1;
+    padding: 20px;
+    border-radius: 30px;
+    border: 1px solid;
+    height: 60px;
+    margin-top: 48px;
+    transition: .3s;
+}
+.button:hover{
+    .arrow-white div{
+        fill: #0A142F !important;
+    }
+    color: #0A142F;
+    opacity: 1;
+    border-radius: 30px;
+    background-color: #FFC93E;
+    height: 60px;
+}
 
 
 .card-section{
@@ -202,9 +207,8 @@ export default {
                     border-radius: 30px;
                     background-color: #FFC93E;
                     height: 60px;
-
-                    svg {
-                        fill: #0A142F;
+                    .turn-white > svg{
+                        fill: #0A142F !important;
                     }
                 }
             }
