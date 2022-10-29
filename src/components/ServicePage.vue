@@ -7,15 +7,64 @@
             <img v-else style="width: 15px; height: 15px" class="ml-2.5" src="../image/turn-white-icon.svg" alt="">
         </button>
     </div>
-    <div  class="card-conteiner container items-center justify-around grid grid-cols-2 grid-rows-2 text-white ">
-        <div v-for="(item,index) in items" :key="index" class="card">
-            <img :src="items[index].image_url" alt="">
-            <div class="title">{{ items[index].title }}</div>
-            <div class="paragraph">{{ items[index].paragraph }}</div>
+    <section class="card-section">
+        <div  class="card-container container2 flex items-center grid-cols-2 justify-center text-white ">
+            <div style="border-radius: 50px 0px 0px 0px; " class="card mx-4 ">
+                <div class="card-content">
+                    <img src="../image/write-icon.svg" alt="">
+                    <h3 class="card-title">{{items[1].title}}</h3>
+                    <div class="p paragraph">
+                        {{items[1].paragraph}}
+                    </div>
+                    <button class="button flex items-center ">Read More
+                        <img style="width: 15px; height: 15px" class="ml-2.5" src="../image/turn.svg" alt="">
+                    </button>
+                </div>
+            </div>
+            <div style="border-radius: 0px 50px 0px 0px; "  class="card mx-4 mt-20 ">
+                <div class="card-content">
+                    <img src="../image/docs-icon.svg" alt="">
+                    <h3 class="card-title">{{items[2].title}}</h3>
+                    <div class="p paragraph">
+                        {{items[2].paragraph}}
+                    </div>
+                    <button class="button flex items-center ">Read More
+                        <img style="width: 15px; height: 15px" class="ml-2.5" src="../image/turn.svg" alt="">
+                    </button>
+                </div>
+            </div>
+
         </div>
+        <div  class="card-container container2 flex items-center grid-cols-2 justify-center text-white ">
+            <div style="border-radius: 0px 0px 0px 50px; " class="card mx-4 ">
+                <div class="card-content">
+                    <img src="../image/write-icon.svg" alt="">
+                    <h3 class="card-title">{{items[1].title}}</h3>
+                    <div class="p paragraph">
+                        {{items[1].paragraph}}
+                    </div>
+                    <button class="button flex items-center ">Read More
+                        <img style="width: 15px; height: 15px" class="ml-2.5" src="../image/turn.svg" alt="">
+                    </button>
+                </div>
+            </div>
+            <div style="border-radius: 0px 0px 50px 0px; "  class="card mx-4 mt-20  ">
+                <div class="card-content">
+                    <img src="../image/docs-icon.svg" alt="">
+                    <h3 class="card-title">{{items[2].title}}</h3>
+                    <div class="p paragraph">
+                        {{items[2].paragraph}}
+                    </div>
+                    <button class="button flex items-center ">Read More
+                        <img style="width: 15px; height: 15px" class="ml-2.5" src="../image/turn.svg" alt="">
+                    </button>
+                </div>
+            </div>
 
 
-    </div>
+        </div>
+    </section>
+
 </div>
 </template>
 
@@ -25,6 +74,7 @@ export default {
     data(){
         return{
             hover:false,
+            hover_content:false,
             items:[
                 {
                     image_url:`../image/geo-icon.svg`,
@@ -103,26 +153,61 @@ export default {
 
 
 
-.card-container{
-    .card{
-        .title{
-            font-style: normal;
-            font-weight: 600;
-            font-size: 30px;
-            line-height: 36px;
-            color: yellow;
-            padding: 100px;
-        }
-        .paragraph{
-            font-family: 'Inter';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 30px;
-            /* or 188% */
+.card-section{
+    .container2:nth-child(2){
+        margin-top: -50px;
+    }
+    .card-container{
+        .card{
+            background: #353F5B;
+            width: 555px;
+            padding: 34px 83px 44px 83px;
+            text-align: left;
+            .card-content {
+                .card-title {
+                    margin-top: 23px;
+                    margin-bottom: 24px;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 30px;
+                    line-height: 36px;
+                    color: #fff;
+                }
 
+                .paragraph {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 30px;
 
-            color: #E0E5F3;
+                    color: #E0E5F3;
+
+                    color: #E0E5F3;
+                }
+
+                .button {
+                    color: #FFFFFF;
+                    opacity: 1;
+                    padding: 20px;
+                    border-radius: 30px;
+                    border: 1px solid;
+                    height: 60px;
+                    margin-top: 48px;
+                    transition: .3s;
+                }
+
+                .button:hover {
+                    color: #0A142F;
+                    opacity: 1;
+                    border-radius: 30px;
+                    background-color: #FFC93E;
+                    height: 60px;
+
+                    svg {
+                        fill: #0A142F;
+                    }
+                }
+            }
         }
     }
 }
