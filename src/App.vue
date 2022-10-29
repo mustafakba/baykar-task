@@ -2,7 +2,8 @@
 <HomePage></HomePage>
 <DigitalAgency></DigitalAgency>
 <OurSolutions></OurSolutions>
-    <ServicePage></ServicePage>
+<ServicePage></ServicePage>
+<LatestProjects></LatestProjects>
 </template>
 
 <script>
@@ -10,9 +11,11 @@ import HomePage from "@/components/HomePage";
 import DigitalAgency from "@/components/DigitalAgency";
 import OurSolutions from "@/components/OurSolutions";
 import ServicePage from "@/components/ServicePage";
+import LatestProjects from "@/components/LatestProjects";
 export default {
   name: 'App',
   components: {
+      LatestProjects,
       ServicePage,
       HomePage,
       DigitalAgency,

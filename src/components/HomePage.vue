@@ -95,7 +95,11 @@ export default {
             font-weight: 500;
             line-height: 22px;
         }
+        a:hover{
+            color: #FFC93E;
+        }
     }
+
     .lines{
         width: 490px;
         height: 428px;
