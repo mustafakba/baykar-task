@@ -36,7 +36,7 @@
 </template>
 
 <script>
-import TurnWhite from "@/components/TurnWhite";
+import TurnWhite from "@/components/ArrowIcon";
 export default {
     components:{
         TurnWhite,

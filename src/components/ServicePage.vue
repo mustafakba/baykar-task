@@ -2,9 +2,7 @@
 <div class="container">
     <div class="help-section flex justify-around items-center container">
         <h3 class="title">Service We Can Help You</h3>
-        <button class="button flex items-center ">Read More
-            <TurnWhite class="ml-2 arrow-white"></TurnWhite>
-        </button>
+        <DefaultButton title="See All"></DefaultButton>
     </div>
     <section class="card-section">
         <div  class="card-container container2 flex items-center grid-cols-2 justify-center text-white ">
@@ -68,11 +66,13 @@
 </template>
 
 <script>
-import TurnWhite from "@/components/TurnWhite";
+import TurnWhite from "@/components/ArrowIcon";
+import DefaultButton from "@/components/DefaultButton";
 export default {
     name: "ServicePage",
     components:{
         TurnWhite,
+        DefaultButton
     },
     data(){
         return{

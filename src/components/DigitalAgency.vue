@@ -12,9 +12,7 @@
                 marketing to deliver truly integrated digital solutions.
                 This unique set of capabilities sets us apart from other agencies
                 and positions DIG to help you attack your goals.</p>
-                <button class="yellow-button flex items-center ">Contact Us
-                <img style="width: 15px; height: 15px" class="ml-2.5" src="../image/turn.svg" alt="">
-                </button>
+                <DefaultButton title="Contact Us"></DefaultButton>
         </div>
         <div class="right-section flex grid grid-cols-2 ml-10">
             <div class="left-image-section ml-10 ">
@@ -51,8 +49,14 @@
 </template>
 
 <script>
+import DefaultButton from '@/components/DefaultButton'
 export default {
-    name: "DigitalAgency"
+
+    name: "DigitalAgency",
+    components: {
+        DefaultButton
+    }
+
 }
 </script>
 

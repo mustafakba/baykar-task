@@ -53,9 +53,7 @@
         <div class="explain">
             <p class="explain-text">Full-service design support that growing B2B companies need. World leading agency.</p>
             <div class="our-project flex relative">
-                <button class="yellow-button flex items-center ">Our Projects
-                    <img style="width: 15px; height: 15px" class="ml-2.5" src="../image/turn.svg" alt="">
-                </button>
+                <default-button title="Our Projects"></default-button>
                 <img class="absolute left-image" src="../image/homepage-left-photo.svg" alt="">
                 <img class="eclipse" src="../image/eclipse-ball.svg" alt="">
 
@@ -77,8 +75,13 @@
 </template>
 
 <script>
+import DefaultButton from "@/components/DefaultButton";
+
 export default {
-    name: "HeaderComponent"
+    name: "HeaderComponent",
+    components:{
+        DefaultButton
+    }
 }
 </script>
 
