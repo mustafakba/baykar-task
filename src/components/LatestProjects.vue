@@ -29,14 +29,18 @@
                 </div>
             </div>
         </div>
-        <button class="button flex items-center ">Load More
-            <img style="width: 15px; height: 15px" class="ml-2.5" src="../image/turn-white-icon.svg" alt="">
+        <button class="button flex items-center ">Read More
+            <TurnWhite class="ml-2 arrow-white"></TurnWhite>
         </button>
     </div>
 </template>
 
 <script>
+import TurnWhite from "@/components/TurnWhite";
 export default {
+    components:{
+        TurnWhite,
+    },
     name: "LatestProjects"
 }
 </script>
@@ -78,7 +82,7 @@ export default {
             margin-top: 32px;
             color: #E0E5F3;
             font-size: 16px;
-            font-width: 400;
+            font-weight: 400;
             line-height: 30px;
         }
     }
