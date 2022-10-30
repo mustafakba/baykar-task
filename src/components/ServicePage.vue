@@ -76,8 +76,6 @@ export default {
     },
     data(){
         return{
-            hover:false,
-            hover_content:false,
             items:[
                 {
                     image_url:`../image/geo-icon.svg`,
