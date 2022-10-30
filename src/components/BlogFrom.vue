@@ -3,7 +3,7 @@
     <div class="container flex grid-rows-1 justify-center">
             <div v-for="(item,index) in items" :key="index" class="card flex flex-col self-start justify-center mx-8">
                 <div class="card-image">
-                    <img src="../image/blog-image-1.png" alt="">
+                    <div class="image" :style="{'background-image': item.image_url ? 'url(' +item.image_url+ ')':''}" ></div>
                 </div>
                 <div class="type flex mt-6">
                     <span> {{items[index].type}} </span>
@@ -22,6 +22,10 @@
 
 <script>
 import DefaultButton from "@/components/DefaultButton";
+import BlogImage from "@/image/blog-image-1.png"
+import BlogImage2 from "@/image/blog-image-2.png"
+
+
 export default {
     name: "BlogFrom",
     components:{
@@ -31,7 +35,7 @@ export default {
         return{
             items:[
                 {
-                    image_url:'../image/blog-image-1.png',
+                    image_url:BlogImage,
                     type :'TECHNOLOGY',
                     full_name :'John Doe • ',
                     date :'19 Jan 2022',
@@ -39,7 +43,7 @@ export default {
 
                 },
                 {
-                    image_url:"../image/blog-image-2.png",
+                    image_url:BlogImage2,
                     type :'WEBINER',
                     full_name :'John Doe •',
                     date :' 19 Jan 2022',
@@ -54,7 +58,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .title{
     margin-bottom: 40px;
     margin-top: 120px;
@@ -104,6 +108,11 @@ export default {
     line-height: 38px;
 
     color: #FFFFFF;
-
+}
+.card-image{
+    .image{
+        height:312px ;
+        width: 554px;
+    }
 }
 </style>
