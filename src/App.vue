@@ -7,6 +7,7 @@
 <HappyClients></HappyClients>
     <BlogFrom></BlogFrom>
 <CategoriesPage></CategoriesPage>
+    <FooterComponent></FooterComponent>
 </template>
 
 <script>
@@ -18,9 +19,11 @@ import LatestProjects from "@/components/LatestProjects";
 import HappyClients from "@/components/HappyClients";
 import BlogFrom from "@/components/BlogFrom";
 import CategoriesPage from "@/components/CategoriesPage";
+import FooterComponent from "@/components/FooterComponent";
 export default {
   name: 'App',
   components: {
+      FooterComponent,
       CategoriesPage,
       BlogFrom,
       HappyClients,
@@ -37,7 +40,6 @@ export default {
 #app {
     height: 100%;
     background-color: #0A142F;
-    padding-bottom: 300px;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
