@@ -6,7 +6,7 @@
                     <img src="../image/blog-image-1.png" alt="">
                 </div>
                 <div class="type flex mt-6">
-                    <span> {{items[index].type}}</span>
+                    <span> {{items[index].type}} </span>
                 </div>
                 <div class="name-date flex mt-2.5 mb-2">
                     <span class="name">{{items[index].full_name}} {{items[0].date}}</span>

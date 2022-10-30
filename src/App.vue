@@ -5,6 +5,8 @@
 <ServicePage></ServicePage>
 <LatestProjects></LatestProjects>
 <HappyClients></HappyClients>
+    <BlogFrom></BlogFrom>
+<CategoriesPage></CategoriesPage>
 </template>
 
 <script>
@@ -14,9 +16,13 @@ import OurSolutions from "@/components/OurSolutions";
 import ServicePage from "@/components/ServicePage";
 import LatestProjects from "@/components/LatestProjects";
 import HappyClients from "@/components/HappyClients";
+import BlogFrom from "@/components/BlogFrom";
+import CategoriesPage from "@/components/CategoriesPage";
 export default {
   name: 'App',
   components: {
+      CategoriesPage,
+      BlogFrom,
       HappyClients,
       LatestProjects,
       ServicePage,
